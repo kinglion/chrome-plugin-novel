@@ -1,0 +1,52 @@
+{
+  "name": "proxy-local",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "dependencies": {
+    "@ali/nut": "^3.0.0-rc.1",
+    "egg-view-nunjucks": "^2.0.0",
+    "koa-proxy": "^0.8.0"
+  },
+  "devDependencies": {
+    "@ali/ci": "^3.4.0",
+    "@ali/egg-bin": "^2.0.0",
+    "@ali/mm": "^6.0.0",
+    "autod": "^2.8.0",
+    "eslint": "^3.18.0",
+    "eslint-config-egg": "^3.2.0",
+    "supertest": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "egg-bin dev",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "config": {
+    "alicov": {
+      "threshold": 90
+    }
+  },
+  "ci": {
+    "type": "gitlab",
+    "versions": [
+      "6"
+    ]
+  },
+  "publishConfig": {
+    "registry": "http://registry.npm.alibaba-inc.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "kinglion"
+}

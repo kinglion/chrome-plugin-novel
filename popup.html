@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+  	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <title>Novel</title>
+    <style>
+      body {
+        font-family: PingFang SC, "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+        background-color: #000;
+      }
+      #status {
+        /* avoid an excessively wide status text */
+        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 400px;
+      }
+      .content {
+        width: 320px;
+        color: green;
+        margin: 10px auto;
+      }
+      .content::selection { background: blue; color: #fff; }
+    </style>
+
+     <script src="jquery.js"></script>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <button value="上一篇" class="prev">上一篇</button>
+    <button value="下一篇" class="next">下一篇</button>
+    <div class="content" id="title"></div>
+    <div class="content" id="content"></div>
+    <button value="上一篇" class="prev">上一篇</button>
+    <button value="下一篇" class="next">下一篇</button>
+    <div id="status"></div>
+  </body>
+</html>
+
